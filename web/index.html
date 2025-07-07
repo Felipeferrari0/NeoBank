@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeoBank</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f9fafb;
+      color: #111827;
+      margin: 0;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: white;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section.hero {
+      text-align: center;
+      background-color: #dbeafe;
+      padding: 5rem 1.5rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero button {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .hero button:hover {
+      background-color: #1e40af;
+    }
+
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .section-container h3 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: box-shadow 0.3s;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    .card i {
+      font-size: 2rem;
+      color: #1e40af;
+      margin-bottom: 1rem;
+    }
+
+    .card h4 {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+    }
+
+    .text-section {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .text-section p {
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    .testimonial {
+      background-color: white;
+      padding: 1.5rem;
+      border-left: 4px solid #1e40af;
+      font-style: italic;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+  </style>
+  <!-- Solo se incluye Font Awesome si querés los íconos -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <h1>NeoBank</h1>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Productos</a>
+      <a href="#">Sobre Nosotros</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Tu dinero. Tu control. Tu banco en la nube.</h2>
+    <p>Rápido, seguro y 100% digital. Abrí tu cuenta en minutos y accedé a productos financieros pensados para vos.</p>
+    <button>Quiero abrir mi cuenta</button>
+  </section>
+
+  <section class="section-container">
+    <h3>¿Qué ofrecemos?</h3>
+    <div class="grid">
+      <div class="card">
+        <i class="fas fa-check-circle"></i>
+        <h4>Cuenta sin comisiones</h4>
+        <p>Accedé a tu cuenta digital sin costos ocultos.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-credit-card"></i>
+        <h4>Tarjeta internacional</h4>
+        <p>Comprá y retirás en el mundo sin complicaciones.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h4>Inversiones simples</h4>
+        <p>Crecé tu dinero con opciones desde la app.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-globe"></i>
+        <h4>Pagos internacionales</h4>
+        <p>Envíos y transferencias al instante donde quieras.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-section">
+    <h3>Impulsado por tecnología de punta</h3>
+    <p>
+      En NeoBank estamos en plena transición hacia una arquitectura de nube híbrida utilizando AWS y OpenShift,
+      lo que nos permite acelerar nuestros ciclos de desarrollo y despliegue. Gracias a esta infraestructura moderna,
+      podemos escalar rápidamente nuestros servicios y adaptarnos mejor a las necesidades de nuestros clientes en toda
+      Latinoamérica. Nuestro equipo DevOps implementa infraestructura como código con Terraform para asegurar entornos
+      consistentes, automatizados y seguros.
+    </p>
+  </section>
+
+  <section class="text-section">
+    <h3>Lo que dicen nuestros usuarios</h3>
+    <div class="testimonial">“En 5 minutos tenía mi cuenta lista.”</div>
+    <div class="testimonial">“Me encanta lo fácil que es manejar mi plata desde el celular.”</div>
+  </section>
+
+  <footer>
+    &copy; 2025 NeoBank. Todos los derechos reservados. | Contacto: hola@neobank.lat
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+---
+- hosts: web
+  become: yes
+  tasks:
+    - name: Instalar Nginx
+      ansible.builtin.yum:
+        name: nginx
+        state: present
+
+    - name: Iniciar Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Copiar archivo HTML
+      ansible.builtin.copy:
+        src: ../web/index.html
+        dest: /usr/share/nginx/html/index.html
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Instalar dependencias para Instana
+      ansible.builtin.yum:
+        name:
+          - ca-certificates
+        state: present
+
+    - name: Descargar el instalador del agente de Instana
+      ansible.builtin.get_url:
+        url: https://setup.instana.io/agent
+        dest: /tmp/instana-agent.sh
+        mode: '0755'
