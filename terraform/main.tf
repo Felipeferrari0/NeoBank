@@ -3,7 +3,7 @@ data "aws_vpc" "default" {
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region = var.aws_region
 }
 
 resource "aws_key_pair" "neobank_key" {
