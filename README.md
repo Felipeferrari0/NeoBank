@@ -2,23 +2,23 @@ neobank-demo/
 
     ├── ansible/
 
-    │   ├── playbook.yml
+        │   ├── playbook.yml
 
-    │   └── inventory.ini  ← (se genera automáticamente por Terraform)
+        │   └── inventory.ini  ← (se genera automáticamente por Terraform)
 
-├── keys/
+    ├── keys/
 
-    │   └── neobank-key.pub
+        │   └── neobank-key.pub
 
-├── terraform/
+    ├── terraform/
 
-    │   ├── main.tf
+        │   ├── main.tf
 
-    │   ├── variables.tf
+        │   ├── variables.tf
 
-    │   └── outputs.tf
+        │   └── outputs.tf
 
-└── web/
+    └── web/
 
-    └── index.html
+        └── index.html
 
